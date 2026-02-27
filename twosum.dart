@@ -1,20 +1,19 @@
 void main() {
-  List<int> nums = [2, 7, 11, 15];
-  int target = 18;
+  List<int> prices = [1200, 500, 700, 300];
+  int coupon = 1000;
 
-  print(twoSum(nums, target));
-}
+  Map<int, int> priceMap = {}; // price -> index
 
-List<int> twoSum(List<int> nums, int target) {
-  Map<int, int> seen = {};
+  for (int i = 0; i < prices.length; i++) {
+    int remaining = coupon - prices[i];
 
-  for (int i = 0; i < nums.length; i++) {
-    int complement = target - nums[i];
-
-    if (seen.containsKey(complement)) {
-      return [seen[complement]!, i];
+    if (priceMap.containsKey(remaining)) {
+      print("Indices: ${priceMap[remaining]}, $i");
+      return;
     }
-    seen[nums[i]] = i;
+
+    priceMap[prices[i]] = i;
   }
-  return [];
+
+  print("No pair found");
 }
