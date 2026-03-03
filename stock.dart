@@ -19,5 +19,5 @@ void main() {
     day += 1;
   }
 
-  print("Maximum Profit: $profit");
+  print("Maximum Prfit: $profit");
 }
