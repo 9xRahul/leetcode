@@ -12,14 +12,10 @@ void rotate(List<int> nums, int k) {
     }
   }
 
-
-  // Step 1: Reverse whole array
   reverse(0, n - 1);
 
-  // Step 2: Reverse first k elements
   reverse(0, k - 1);
 
-  // Step 3: Reverse remaining n-k elements
   reverse(k, n - 1);
 }
 
