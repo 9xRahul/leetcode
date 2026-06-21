@@ -27,5 +27,6 @@ void main() {
 
   print("Input: $nums");
   print("Output: $output");
+  //this comments 
   // Expected Output: [24, 12, 8, 6]
 }
